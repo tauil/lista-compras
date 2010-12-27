@@ -5,15 +5,15 @@
   <%= @list.name %>
 </p>
 
-<%- if @list.products.any? %>
-  <%= render @list.products %>
-<%- else %>
-  <p>No products found yet.</p>
-<%- end %>
+<div id="products">
+  <%= render @list.products || "No products found yet." %>
+</div>
 
 <hr />
 
-<%= render "products/form", :list => @list, :product => Product.new  %>
+<div id="product_form">
+  <%= render "products/form", :list => @list, :product => Product.new  %>
+</div>
 
 <%= link_to 'Edit', edit_list_path(@list) %> |
 <%= link_to 'Back', lists_path %>

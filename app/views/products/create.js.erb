@@ -1,0 +1,7 @@
+<% if @product.valid? %>
+  $("#products").append("<%= escape_javascript(render(@product)) %>");
+  $("#<%= dom_id(@product) %>").show('clip');
+  <% @product = Product.new %>
+<% end %>
+
+$("#product_form").html("<%= escape_javascript(render("form", :list => @list, :product => @product)) %>")
