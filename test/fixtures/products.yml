@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  amount: 1
+  done: false
+  list: 
+
+two:
+  name: MyString
+  amount: 1
+  done: false
+  list: 

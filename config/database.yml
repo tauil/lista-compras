@@ -10,9 +10,8 @@ development:
   encoding: utf8
   reconnect: false
   database: lista-compras_development
-  pool: 5
   username: root
-  password:
+  password: 
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -23,7 +22,6 @@ test:
   encoding: utf8
   reconnect: false
   database: lista-compras_test
-  pool: 5
   username: root
   password:
   host: localhost
@@ -33,7 +31,6 @@ production:
   encoding: utf8
   reconnect: false
   database: lista-compras_production
-  pool: 5
   username: root
   password:
   host: localhost
