@@ -1,0 +1,4 @@
+<% if @product.valid? %>
+  $("#products").removeData("<%= escape_javascript(render(@product)) %>");
+  $("#<%= dom_id(@product) %>").hide("clip");
+<% end %>
