@@ -3,16 +3,10 @@
   <%= error_messages_for product %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :name %> <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :amount %><br />
-    <%= f.text_field :amount %>
-  </div>
-  <div class="field">
-    <%= f.label :done %><br />
-    <%= f.check_box :done %>
+    <%= f.label :amount %> <%= f.text_field :amount %>
   </div>
   <div class="actions">
     <%= f.submit %>

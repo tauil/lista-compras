@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Data</th>
     <th>Name</th>
     <th></th>
     <th></th>
@@ -10,6 +11,7 @@
 
 <% @lists.each do |list| %>
   <tr>
+    <td><%= time_ago_in_words list.created_at %></td>
     <td><%= list.name %> com <%= list.products.count %> itens</td>
     <td><%= link_to 'Show', list %></td>
     <td><%= link_to 'Edit', edit_list_path(list) %></td>
