@@ -35,7 +35,7 @@ class ListsController < ApplicationController
   def update
     @list = List.find(params[:id])
 
-    flash[:notice] = 'List was successfully updated.' if @list.update
+    flash[:notice] = 'List was successfully updated.' if @list.update_attributes(params[:post])
 
     respond_with @list
   end
@@ -43,7 +43,7 @@ class ListsController < ApplicationController
   def destroy
     @list = List.find(params[:id])
 
-    @list.destroy
+    flash[:notice] = 'List was successfully deleted.' if @list.destroy
 
     respond_with @list
   end
