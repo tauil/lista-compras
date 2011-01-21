@@ -6,7 +6,15 @@
 </p>
 
 <div id="products">
-  <%= render @list.products || "No products found yet." %>
+
+<%= content_tag(:span, "No products found yet.") if @list.products.empty? %>
+
+<%= form_tag done_list_products_path(@list), :method => :put do %>
+	<ul>
+		<%= render @list.products %>
+	</ul>
+	<%= submit_tag "Mark as Complete" unless @list.products.empty? %>
+<%- end %>
 </div>
 
 <hr />

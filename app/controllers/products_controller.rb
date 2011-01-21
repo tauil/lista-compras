@@ -18,7 +18,14 @@ class ProductsController < ApplicationController
 
     respond_with @product
   end
-  
+
+  def done
+    product_ids = @list.products.collect(&:id)
+    @list.products.update_all(["done = ?", false], :id => product_ids - params[:product_ids].collect(&:to_i))
+    @list.products.update_all(["done = ?", true], :id => params[:product_ids])
+    redirect_to list_path(@list)
+  end
+
   def load_list
     @list = List.find(params[:list_id])
   end

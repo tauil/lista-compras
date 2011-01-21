@@ -1,3 +1,4 @@
-<%= div_for product do %>
-  <%= product.done %> <%= product.name %> <%= product.amount %> Added <%= time_ago_in_words product.created_at %> ago [<%= link_to 'Apagar', [@list, product], :confirm => 'Are you sure?', :method => :delete, :remote => true %>]
+<%= content_tag_for :li, product do %>
+	<%= check_box_tag "product_ids[]", product.id, product.done.present? %>
+  <%= product.name %> <%= product.amount %> Added <%= time_ago_in_words product.created_at %> ago [<%= link_to 'Apagar', [@list, 	product], :confirm => 'Are you sure?', :method => :delete, :remote => true %>]
 <% end %>
