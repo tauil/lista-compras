@@ -27,7 +27,7 @@ class ProductsController < ApplicationController
     product_ids = @list.products.collect(&:id)
     @list.products.update_all(["done = ?", false], :id => product_ids - params[:product_ids].collect(&:to_i))
     @list.products.update_all(["done = ?", true], :id => params[:product_ids])
-    redirect_to list_path(@list)
+    respond_with @product
   end
 
 end

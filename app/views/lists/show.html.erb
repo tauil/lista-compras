@@ -8,11 +8,10 @@
 <div id="products">
   <%= content_tag(:span, "No products found yet.") if @list.products.empty? %>
   
-  <%= form_tag complete_list_products_path(@list), :method => :put do %>
+  <%= form_tag complete_list_products_path(@list), :method => :put, :remote => true do %>
     <ul>
       <%= render @list.products %>
     </ul>
-    <%= submit_tag "Enviar" unless @list.products.empty? %>
   <% end %>
 </div>
 
