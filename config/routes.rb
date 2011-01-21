@@ -1,7 +1,9 @@
 ListaCompras::Application.routes.draw do
 
   resources :lists do
-    resources :products
+    resources :products do
+      put :complete, :on => :collection
+    end
   end
 
   # The priority is based upon order of creation:
