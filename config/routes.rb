@@ -1,5 +1,7 @@
 ListaCompras::Application.routes.draw do
-
+  
+  root :to => redirect("/lists")
+  
   resources :lists do
     resources :products do
       put :complete, :on => :collection
