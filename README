@@ -2,8 +2,7 @@
 
 TODO:
 
-* Ao criar um produto o campo "done" deve ser criado como true. Atualmente é criado como "null"
-* Como editar um item via ajax. Ex: Ter um checkbox do lado de cada item da lista de modo que quando clicamos ele muda o estado do campo booleano (Done? true false);
+* Ao criar um produto o campo "done" deve ser criado como false. Atualmente é criado como "null"
 * Corrigir os testes;
 * Começar a brincar com o jQuery mobile.
 * Como solucionar quando é quantidade de produto ou peso. Ex: No campo quantidade pode ser 500g ou 2 itens.
