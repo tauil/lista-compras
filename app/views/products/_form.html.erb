@@ -3,10 +3,10 @@
   <%= error_messages_for product %>
 
   <div class="field">
-    <%= f.label :name %> <%= f.text_field :name %>
+    <%= f.label :name %> <%= f.text_field :name, :tabindex => "1" %>
   </div>
   <div class="field">
-    <%= f.label :amount %> <%= f.text_field :amount %>
+    <%= f.label :amount %> <%= f.text_field :amount, :tabindex => "2" %>
   </div>
   <div class="actions">
     <%= f.submit %>

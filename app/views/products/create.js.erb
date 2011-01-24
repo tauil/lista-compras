@@ -1,5 +1,5 @@
 <% if @product.valid? %>
-  $("#products").append("<%= escape_javascript(render(@product)) %>");
+  $("#products ul").append("<%= escape_javascript(render(@product)) %>");
   $("#<%= dom_id(@product) %>").show('clip');
   <% @product = Product.new %>
 <% end %>
